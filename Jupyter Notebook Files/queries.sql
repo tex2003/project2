@@ -15,9 +15,11 @@ ALTER TABLE Wine_Data MODIFY COLUMN wine VARCHAR(255)
     CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
     
 
--- CREATE TABLE Weather_Data (
---   id INT PRIMARY KEY,
-
+CREATE TABLE Sun_Data (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  state VARCHAR(250),
+  percentage_sunshine INT,
+  total_sunshine_hours INT
 );
 
 -- Joins the tables
