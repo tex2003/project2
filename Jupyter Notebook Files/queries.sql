@@ -11,6 +11,9 @@ CREATE TABLE Wine_Data (
   
 );
 
+ALTER TABLE Wine_Data MODIFY COLUMN wine VARCHAR(255)  
+    CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+    
 
 -- CREATE TABLE Weather_Data (
 --   id INT PRIMARY KEY,
