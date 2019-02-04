@@ -22,8 +22,7 @@ CREATE TABLE Sun_Data (
   total_sunshine_hours INT
 );
 
--- Joins the tables
--- SELECT Wine_Data.State, customer_name.first_name, customer_name.last_name, customer_location.address, customer_location.us_state
--- FROM customer_name
--- JOIN customer_location
--- ON customer_name.id = customer_location.id;
+-- Joins the tables and looks at average price by state in relation to percentage of sunshine
+Select w. state, avg(w.price), s.percentage_sunshine 
+from Wine_Data w join Sun_Data s on w.state= s.state 
+group by w.state order by percentage_sunshine;
