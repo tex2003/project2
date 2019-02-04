@@ -1,17 +1,16 @@
--- Create and use wine_db
 CREATE DATABASE wine_db;
 USE wine_db;
 
--- Create tables for raw data to be loaded into
 CREATE TABLE Wine_Data (
-  id INT PRIMARY KEY,
-  state TEXT,
-  varietal TEXT,
-  wine TEXT,
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  state VARCHAR(250),
+  varietal VARCHAR(250),
+  wine VARCHAR(250),
   points INT,
   price INT
   
 );
+
 
 -- CREATE TABLE Weather_Data (
 --   id INT PRIMARY KEY,
